@@ -1,0 +1,14 @@
+packer build -var-file vSphere-Connect.json Win2019Build.json
+
+
+
+bon tuto:
+https://notamax.be/deployer-un-ws-server-2019-sur-vsphere-7-via-packer-terraform/
+https://www.grottedubarbu.fr/packer-template-centos8-vsphere/
+
+
+
+
+https://github.com/ruzickap/packer-templates/tree/master/scripts
+https://github.com/ruzickap/packer-templates/tree/master/http
+https://github.com/joefitzgerald/packer-windows/tree/master/scripts
