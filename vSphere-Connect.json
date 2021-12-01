@@ -15,5 +15,8 @@
     "vsphere_user": "administrator@vsphere.local",
     "vsphere_server": "vcenter1.konyxia.local",
     "vsphere_template_name": "Win2019-TEST",
-    "winadmin_password": "Toto123!"
+    "winadmin_password": "Toto123!",
+    "vm-version": "17",
+    "magic_reference_date": "2006-01-02 15-04-05+0800",
+    "ip_wait_timeout": "1h"
 }

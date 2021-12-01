@@ -1,47 +1,22 @@
 {
-
-
     "cpu_num": "2",
     "mem_size": "4096",
-
     "vsphere_compute_cluster": "Cluster",
-
     "vsphere_dc_name": "Datacenter",
     "vsphere_datastore": "Lun-2-Raid5-SSD",
-
     "firmware": "bios",
-
-
-
-
-
-
-
-
     "vsphere_folder": "vRA-VM",
-
     "vsphere_host": "esx3.konyxia.local",
-
-
     "os_iso_path": "[Lun-2-Raid5-SSD] _iso/Windows_server_2019_x64_en.ISO",
     "vmtools_iso_path": "[Lun-2-Raid5-SSD] _iso/windows.iso",
-
-
-
     "vsphere_portgroup_name": "vLAN-001 (Net 206)",
-
-
-
     "vsphere_password": "Asrp13bgv2!",
-
-
     "disk_size": "51200",
-
-
-
-
     "vsphere_user": "administrator@vsphere.local",
     "vsphere_server": "vcenter1.konyxia.local",
     "vsphere_template_name": "Win2019-TEST",
-    "winadmin_password": "Toto123!"
+    "winadmin_password": "Toto123!",
+    "vm-version": "17",
+    "magic_reference_date": "2006-01-02 15-04-05+0800",
+    "ip_wait_timeout": "1h"
 }

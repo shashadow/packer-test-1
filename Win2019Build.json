@@ -1,9 +1,4 @@
 {
-
-    "vm-version": "17",
-    "magic_reference_date": "2006-01-02 15-04-05+0800",
-	"ip_wait_timeout": "1h"
-
   "builders": [
     {
       "CPUs": "{{user `cpu_num`}}",
