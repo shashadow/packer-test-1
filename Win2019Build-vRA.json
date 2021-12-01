@@ -1,0 +1,66 @@
+{
+  "builders": [
+    {
+	"CPUs": "{{user `cpu_num`}}",
+	"RAM": "{{user `mem_size`}}",
+	"RAM_reserve_all": true,
+	"cluster": "{{user `vsphere_compute_cluster`}}",
+	"communicator": "winrm",
+	"datacenter": "{{user `vsphere_dc_name`}}",
+	"datastore": "{{user `vsphere_datastore`}}",
+	"disk_controller_type": "lsilogic-sas",
+	"firmware": "bios",
+	"floppy_files": [
+	"source/setup-w2019/autounattend.xml",
+	"source/setup-w2019/setup.ps1",
+	"source/setup-w2019/ConfigureRemotingForAnsible.ps1",
+	"source/setup-w2019/fixnetwork.ps1",
+	"source/setup-w2019/WinRM-Debug.ps1",
+	"source/setup-w2019/vmtools.cmd"
+	],
+	"folder": "{{user `vsphere_folder`}}",
+	"guest_os_type": "windows2019srv_64Guest",
+	"host": "{{user `vsphere_host`}}",
+	"insecure_connection": "true",
+	"iso_paths": [
+	  "{{user `os_iso_path`}}",
+	  "{{user `vmtools_iso_path`}}"
+	],
+	"network_adapters": [
+	  {
+	    "network": "{{user `vsphere_portgroup_name`}}",
+	    "network_card": "vmxnet3"
+	  }
+	],
+	"password": "{{user `vsphere_password`}}",
+	"storage": [
+	  {
+	    "disk_size": "{{user `disk_size`}}",
+	    "disk_thin_provisioned": true
+	  }
+	],
+	"type": "vsphere-iso",
+	"username": "{{user `vsphere_user`}}",
+	"vcenter_server": "{{user `vsphere_server`}}",
+	"vm_name": "{{user `vsphere_template_name`}}",
+	"winrm_password": "{{user `winadmin_password`}}",
+	"winrm_username": "Administrator",
+
+	"convert_to_template": "false",
+	"boot_order": "disk,cdrom",
+	"boot_wait": "10s"
+    }
+  ],
+  "provisioners": [
+    {
+	"inline": [
+	  "dir c:\\"
+	],
+	"type": "windows-shell"
+    }
+  ],
+  "sensitive-variables": [
+    "vsphere_password",
+    "winadmin_password"
+  ]
+}
